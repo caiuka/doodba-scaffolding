@@ -16,13 +16,25 @@
         # Example of a merge of the PR with the number <PR>
         # - oca refs/pull/<PR>/head
 
-# Example of an OCA repository
-./l10n-spain:
+# OCA Italian localization
+./l10n-italy:
     defaults:
         depth: $DEPTH_DEFAULT
     remotes:
-        oca: https://github.com/OCA/l10n-spain.git
+        oca: https://github.com/OCA/l10n-italy.git
     target:
         oca $ODOO_VERSION
     merges:
         - oca $ODOO_VERSION
+
+# Enterprise repository
+./enterprise:
+    defaults:
+        depth: $DEPTH_DEFAULT
+    remotes:
+        ent: git@gitlab.com:caiuka/enterprise-v12.git
+    target:
+        ent master
+    merges:
+        - ent master
+

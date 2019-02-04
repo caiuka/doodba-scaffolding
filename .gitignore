@@ -19,3 +19,7 @@ docker-compose.yml
 
 # Project-specific docker configurations
 .docker
+
+# Mac specific
+.DS_Store
+
